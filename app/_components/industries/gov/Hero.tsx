@@ -107,14 +107,14 @@ export default function Hero() {
                                     <div style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 0.3), black , rgba(0, 0, 0, 0.3))' }} className="flex flex-col gap-3">
                                         {
                                             [1, 2, 3, 4].map((item) => (
-                                                <span className="block w-[28px] aspect-square rounded-sm bg-white/30" />
+                                                <span key={item} className="block w-[28px] aspect-square rounded-sm bg-white/30" />
                                             ))
                                         }
                                     </div>
                                     <div style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 0.3), black , rgba(0, 0, 0, 0.3))' }} className="flex flex-col gap-3">
                                         {
                                             [1, 2, 3, 4].map((item) => (
-                                                <span className="block w-[28px] aspect-square rounded-sm bg-white/30" />
+                                                <span key={item} className="block w-[28px] aspect-square rounded-sm bg-white/30" />
                                             ))
                                         }
                                     </div>
@@ -127,7 +127,7 @@ export default function Hero() {
                             </div>
                             <div className="flex-1 grid grid-cols-3 grid-rows-2 p-8 gap-6">
                                 {
-                                    CAMERAS.map(({ id, name, cameraStatus, audioAvailable, vehicleDetected, cameraFootage, timeStamp }) => (
+                                    CAMERAS.map(({ id, name, cameraFootage }) => (
                                         <div key={id} className="flex flex-col overflow-hidden rounded-xl">
                                             <span className="bg-white flex justify-between items-center gap-2 px-3 py-2">
                                                 <div className="flex flex-1 gap-2 items-center">

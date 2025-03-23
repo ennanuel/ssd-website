@@ -27,13 +27,13 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-10 h-[var(--header-large-height)] font-inter border-b border-gray-200/20 bg-dark-blue">
             <div className="mx-auto h-full flex justify-between items-center max-w-[var(--max-width)]">
-                <a href="/" className="flex items-center gap-2">
+                <Link href="/" className="flex items-center gap-2">
                     <Image src={"/icons/logo.svg"} width={64} height={64} alt="Company logo" className="w-10 aspect-square" />
                     <span className="flex flex-col">
                         <h3 className="font-light text-white uppercase text-sm tracking-tight">Safe Security Dynamics</h3>
                         <p className="font-light text-xs text-white">Safety First</p>
                     </span>
-                </a>
+                </Link>
                 <div className="flex gap-10 items-center">
                     <nav className="">
                         <ul className="flex items-center gap-4">

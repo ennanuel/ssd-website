@@ -70,7 +70,7 @@ export default function Pricing() {
                 </div>
                 <ul className="grid grid-cols-4 gap-4 mt-20">
                     {
-                        PRICING.map(({ title, description, price, backgroundColor, features, buttonText, highlighted }) => (
+                        PRICING.map(({ title, description, price, backgroundColor, features, buttonText }) => (
                             <li key={title} className="group">
                                 <a href="#" className={`${backgroundColor} flex flex-col p-6 pb-0 rounded-3xl border border-gray-200 group-hover:border-blue-600 group-hover:-translate-y-4`}>
                                     <h3 className="text-blue-main font-semibold text-3xl">{title}</h3>

@@ -9,8 +9,8 @@ export default function Contact() {
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-40 flex justify-between gap-20">
                 <div className="flex flex-col h-fit pb-6 sticky top-40">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Contact us</h3>
-                    <h2 className="mt-4 text-4xl leading-[3.6rem] text-gray-800 max-w-[32ch]">We'd like to hear from you</h2>
-                    <p className="mt-8 text leading-[1.8rem] text-gray-600 max-w-[56ch]">Wheather it's customer support, feeback, suggestions, or media inquiries. Our product experts will be happy to answer your questions, give you a tour of Isarsoft Perception, and help you successfully implement your project.</p>
+                    <h2 className="mt-4 text-4xl leading-[3.6rem] text-gray-800 max-w-[32ch]">We&apos;d like to hear from you</h2>
+                    <p className="mt-8 text leading-[1.8rem] text-gray-600 max-w-[56ch]">Wheather it&apos&apos;s customer support, feeback, suggestions, or media inquiries. Our product experts will be happy to answer your questions, give you a tour of Isarsoft Perception, and help you successfully implement your project.</p>
 
                     <div className="mt-10 flex flex-col gap-6">
                         <a href="#" className="flex text-blue-600 items-center gap-3">

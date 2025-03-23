@@ -46,7 +46,7 @@ export default function Faq() {
                 <div className="sticky top-[120px] h-fit flex flex-col">
                     <h2 className="text-4xl text-gray-900 mt-6 max-w-[28ch]">FAQ</h2>
                     <p className="text-gray-800 mt-8 max-w-[48ch] leading-[2rem] text-lg flex flex-col gap-6">
-                        <span>Can't find the answer to your question?</span>
+                        <span>Can&apos;t find the answer to your question?</span>
                         <span><a href="#" className="text-blue-600">Contact us</a> now!</span>
                     </p>
                 </div>
@@ -59,6 +59,7 @@ export default function Faq() {
                                         <h4 className="text-lg group-hover:translate-x-4">{question}</h4>
                                         <FaAngleDown size={20} />
                                     </div>
+                                    <p className="text-base text-gray-800 max-w-[88ch] hidden">{answer}</p>
                                 </li>
                             ))
                         }

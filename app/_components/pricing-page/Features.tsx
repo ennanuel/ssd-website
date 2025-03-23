@@ -1587,14 +1587,14 @@ export default function Features() {
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-20">
                 <div className="mb-20 flex flex-col items-center justify-center text-center gap-6">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Our features</h3>
-                    <h2 className="mt-2 text-4xl text-gray-900">SSD's solution features list</h2>
+                    <h2 className="mt-2 text-4xl text-gray-900">SSD&apos;s solution features list</h2>
                     <p className="text-base text-gray-800 leading-[1.8rem]">A currated list of the features that will be available for each price plan.</p>
                 </div>
                 <div className="sticky top-[calc(var(--header-large-height)_-_8px)] border border-b-0 border-gray-200 rounded-t-xl grid grid-cols-4 overflow-hidden">
                     <span className="bg-gray-100"></span>
                     {
                         PLANS.map(({ title, desc, buttonText }) => (
-                            <div className="h-44 flex flex-col justify-between gap-4 bg-white border-l border-gray-200 p-4">
+                            <div key={title} className="h-44 flex flex-col justify-between gap-4 bg-white border-l border-gray-200 p-4">
                                 <div className="flex flex-col gap-2">
                                     <h3 className="text-2xl font-semibold text-blue-600">{title}</h3>
                                     <p className="text-sm text-gray-800">{desc}</p>

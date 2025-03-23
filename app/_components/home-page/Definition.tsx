@@ -23,7 +23,7 @@ export default function Definition () {
                         <span>ALPR (Automatic License Plate Recognition) is a technology used to automatically read and identify vehicle License Plates <span className="text-blue-800 hover:underline">Optical Character Recognition</span> (OCR). </span>
                         <br />
                         <br />
-                        <span>Safe Security Dynamics' LPR solution leverage cutting-edge Artificial Intelligence and Machine Learning to far exceed traditional systems.</span>
+                        <span>Safe Security Dynamics&apos; LPR solution leverage cutting-edge Artificial Intelligence and Machine Learning to far exceed traditional systems.</span>
                     </p>
                 </div>
             </div>
