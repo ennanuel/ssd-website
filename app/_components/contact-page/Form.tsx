@@ -1,5 +1,4 @@
-import { FiFacebook, FiInstagram, FiLinkedin, FiX, FiYoutube } from "react-icons/fi";
-import { SiThreads } from "react-icons/si";
+import { FiFacebook, FiInstagram, FiLinkedin, FiX } from "react-icons/fi";
 
 
 
