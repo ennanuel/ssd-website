@@ -10,12 +10,12 @@ const DEMO_IMAGES = [
     { id: 6, name: "Crescent Oaks", cameraStatus: "DISABLED", cameraFootage: "/images/vehicle-detection-6.jpg", timeStamp: "12:00 AM"},
 ]
 
-export default function Demo() {
+export default function Demo({ isLight }: { isLight?: boolean }) {
 
     return (
         <section>
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] flex py-20">
-                <div className="flex-1 bg-blue-300/10 overflow-hidden rounded-2xl py-10 px-20 flex gap-20">
+                <div className={`${isLight ? 'bg-white border-gray-200' : 'bg-blue-300/10 border-white'} border flex-1 overflow-hidden rounded-2xl py-10 px-20 flex gap-20`}>
                     <div className="flex flex-col justify-center gap-2">
                         <h2 className="text-4xl text-gray-900 leading-[3.6rem] max-w-[20ch]">Optimize your business processes</h2>
                         <p className="text-gray-800 max-w-[32ch] leading-[1.6rem]">Book your personal web demo with one of our experts now, for free.</p>

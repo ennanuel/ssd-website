@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section>
-            <div className="mx-auto max-w-[var(--max-width)] min-h-screen flex">
-                <div className="flex flex-col py-[120px]">
+            <div className="mx-auto max-w-[var(--max-width)] min-h-screen flex gap-14">
+                <div className="flex flex-col py-30">
                     <div className="flex-1 flex flex-col justify-center">
                         <h1 className="mt-4 text-5xl leading-[3.6rem] max-w-[20ch] text-gray-900">We make every camera count</h1>
                         <p className="mt-6 text-lg leading-[2rem] max-w-[40ch] text-gray-800">Isarsoft helps customers and partners to utilize the full potential of security camera systems through artificial intelligence.</p>

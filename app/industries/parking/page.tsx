@@ -1,6 +1,7 @@
 
 
-export default function Research() {
+
+export default function Parking() {
 
     return (
         <div></div>
