@@ -25,7 +25,7 @@ export default function Sponsors() {
 
 
     return (
-        <div className="w-full bg-blue-300/10">
+        <div className="w-full bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] flex flex-col items-center justify-center gap-10 pt-16 pb-20">
                 <p className="text-gray-800 text-lg text-center">Fast, dynamic web experiences powered by the SSD platform</p>
                 <ul className="w-full flex gap-10 item-center justify-center">

@@ -20,7 +20,7 @@ const STAFFS = [
 export default function Staff() {
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] py-30">
                 <div className="flex flex-col items-center justify-center">
                     <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">Meet the team</h3>

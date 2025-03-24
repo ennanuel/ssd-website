@@ -49,7 +49,7 @@ const PRICING = [
 export default function Hero() {
 
     return (
-        <section className="bg-dark-blue text-white">
+        <section className="bg-dark-blue text-white px-10">
             <div className="mx-auto max-w-[var(--max-width)] pt-30 pb-20">
                 <div className="flex flex-col items-center justify-center gap-6">
                     <h1 className="text-5xl text-center">Pricing</h1>

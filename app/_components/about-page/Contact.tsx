@@ -5,7 +5,7 @@ import { FiMail, FiPhone } from "react-icons/fi";
 export default function Contact() {
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-40 flex justify-between gap-20">
                 <div className="flex flex-col h-fit pb-6 sticky top-40">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Contact us</h3>

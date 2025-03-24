@@ -30,7 +30,7 @@ export default function Advantages() {
 
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-20 flex gap-20 items-center justify-between">
                 <ul className="flex-1 max-w-[800px] grid grid-cols-6 grid-rows-2 gap-4">
                     {

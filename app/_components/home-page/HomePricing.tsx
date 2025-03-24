@@ -61,7 +61,7 @@ const PRICING = [
 export default function Pricing() {
 
     return (
-        <div className="bg-blue-300/10">
+        <div className="bg-blue-300/10 px-10">
             <div className="min-h-screen mx-auto max-w-[var(--max-width)] pt-[120px] pb-20">
                 <div className="flex flex-col items-center justify-center">
                     <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">Software to meet any need</h3>

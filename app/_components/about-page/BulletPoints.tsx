@@ -22,7 +22,7 @@ const POINTS = [
 export default function BulletPoints() {
 
     return (
-        <div className="">
+        <div className="px-10">
             <ul className="mx-auto max-w-[var(--max-width)] flex gap-6 pt-10 pb-20">
                 {
                     POINTS.map(({ numbers, title, description }) => (

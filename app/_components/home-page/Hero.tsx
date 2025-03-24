@@ -34,7 +34,7 @@ export default function Hero() {
 
 
     return (
-        <div className="bg-dark-blue text-white overflow-hidden min-h-dvh">
+        <div className="bg-dark-blue text-white overflow-hidden min-h-dvh px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100dvh_-_var(--header-large-height))] flex gap-10 py-10">
                 <div className="flex-2 flex flex-col justify-end pb-10 gap-10">
                     <div className="flex flex-col gap-6">

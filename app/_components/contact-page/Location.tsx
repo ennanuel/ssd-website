@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Location () {
 
     return (
-        <section className="bg-dark-blue text-white">
+        <section className="bg-dark-blue text-white px-10">
             <div className="mx-auto max-w-[var(--max-width)] py-30 border-b border-white/20 min-h-screen flex items-center gap-20">
                 <div className="relative flex-1">
                     <div className="absolute top-1/2 left-[-20%] -translate-y-1/2 w-[120%]">

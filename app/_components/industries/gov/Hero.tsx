@@ -39,7 +39,7 @@ const POINTS = [
 export default function Hero() {
 
     return (
-        <section className="bg-dark-blue text-white overflow-hidden min-h-dvh">
+        <section className="bg-dark-blue text-white overflow-hidden min-h-dvh px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100dvh_-_var(--header-large-height))] flex flex-col gap-20">
                 <div className="flex gap-10 py-10">
                     <div className="flex-2 flex flex-col justify-end gap-10 pt-12">

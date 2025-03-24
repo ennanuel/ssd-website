@@ -9,7 +9,7 @@ import { IoPerson } from "react-icons/io5";
 export default function WhatWeOffer() {
 
     return (
-        <section className="min-h-screen">
+        <section className="min-h-screen px-10">
             <div className="mx-auto max-w-[var(--max-width)] py-20">
                 <div className="flex flex-col items-center justify-center">
                     <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">What we offer</h3>

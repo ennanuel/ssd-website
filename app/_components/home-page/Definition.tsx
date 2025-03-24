@@ -5,7 +5,7 @@ export default function Definition () {
 
 
     return (
-        <div className="">
+        <div className="px-10">
             <div className="pt-20 mx-auto min-h-screen max-w-[var(--max-width)] flex justify-center items-center gap-20">
                 <div className="w-full max-w-[640px]">
                     <div className="aspect-video rounded-4xl bg-blue-400/20 flex items-center justify-center">

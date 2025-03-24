@@ -44,7 +44,7 @@ export default function Industries() {
 
 
     return (
-        <section className="min-h-[calc(100vh_-_var(--header-large-height))]">
+        <section className="min-h-[calc(100vh_-_var(--header-large-height))] px-10">
             <div className="mx-auto max-w-[var(--max-width)] flex gap-20 pt-40 pb-20">
                 <div className="flex flex-col">
                     <h3 className="text-blue-800 text-sm uppercase font-semibold">Engineered for all</h3>

@@ -24,7 +24,7 @@ export default function HowItWorks() {
 
 
     return (
-        <section className="min-h-[calc(100vh_-_var(--header-large-height))] bg-dark-blue">
+        <section className="min-h-[calc(100vh_-_var(--header-large-height))] bg-dark-blue px-10">
             <div className="mx-auto max-w-[var(--max-width)] pt-40 pb-20">
                 <div className="flex flex-col">
                     <h3 className="text-blue-600 text-base uppercase font-semibold">How it works</h3>

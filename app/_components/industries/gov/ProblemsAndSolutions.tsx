@@ -33,7 +33,7 @@ const PROBLEMS_AND_SOLUTIONS = [
 function ProblemSolutionComponent({ index, title, solutions, desc, imageSrc }: Props) {
 
     return (
-        <article className={`${index % 2 === 0 ? 'bg-white' : 'bg-blue-300/10'}`}>
+        <article className={`${index % 2 === 0 ? 'bg-white' : 'bg-blue-300/10'} px-10`}>
             <div className={`${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] py-20 flex justify-between items-center gap-20`}>
                 <div className="flex flex-col items-start justify-center">
                     <h2 className="text-4xl text-gray-800">{title}</h2>
@@ -60,7 +60,7 @@ function ProblemSolutionComponent({ index, title, solutions, desc, imageSrc }: P
 export default function ProblemsAndSolutions() {
 
     return (
-        <section className="mt-20">
+        <section className="mt-20 px-10">
             <div className="mx-auto max-w-[var(--max-w-[var(--max-width)] flex flex-col items-center justify-center">
                 <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">Agency use cases</h3>
                 <h2 className="text-4xl text-gray-900 mt-6 text-center">How to we contribute to government agencies</h2>

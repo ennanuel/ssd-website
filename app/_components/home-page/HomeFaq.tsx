@@ -41,7 +41,7 @@ const FAQs = [
 export default function Faq() {
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] pt-20 pb-[160px] min-h-screen flex justify-between gap-20">
                 <div className="sticky top-[120px] h-fit flex flex-col">
                     <h2 className="text-4xl text-gray-900 mt-6 max-w-[28ch]">FAQ</h2>

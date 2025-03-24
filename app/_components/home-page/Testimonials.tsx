@@ -6,7 +6,7 @@ import { IoMdQuote } from "react-icons/io";
 export default function Testimonials() {
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] pt-[120px] pb-20 flex flex-col gap-10">
                 <div className="min-h-[calc(100vh_-_40px_-_var(--header-large-height))] bg-dark-blue text-white overflow-hidden rounded-xl flex">
                     <div className="w-full max-w-[640px] bg-black/50"></div>

@@ -1583,7 +1583,7 @@ const FEATURES = [
 export default function Features() {
 
     return (
-        <section id="features">
+        <section id="features" className="px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-20">
                 <div className="mb-20 flex flex-col items-center justify-center text-center gap-6">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Our features</h3>

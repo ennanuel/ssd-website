@@ -25,7 +25,7 @@ export default function Sponsors() {
 
 
     return (
-        <div className="w-full bg-blue-200/10">
+        <div className="w-full bg-blue-200/10 px-10">
             <ul className="mx-auto max-w-[var(--max-width)] flex gap-10 item-center justify-center py-10">
                 {
                     SPONSORS.map(({ name, logo }) => (

@@ -4,7 +4,7 @@ import { FiMail, FiPhone } from "react-icons/fi";
 export default function Hero() {
 
     return (
-        <section className="bg-dark-blue text-white">
+        <section className="bg-dark-blue text-white px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] py-40">
                 <div className="flex justify-between gap-10 items-end">
                     <div className="flex flex-col">

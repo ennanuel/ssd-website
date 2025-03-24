@@ -13,7 +13,7 @@ const DEMO_IMAGES = [
 export default function Demo({ isLight }: { isLight?: boolean }) {
 
     return (
-        <section>
+        <section className="px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] flex py-20">
                 <div className={`${isLight ? 'bg-white border-gray-200' : 'bg-blue-300/10 border-white'} border flex-1 overflow-hidden rounded-2xl py-10 px-20 flex gap-20`}>
                     <div className="flex flex-col justify-center gap-2">

@@ -5,7 +5,7 @@ import { FiFacebook, FiInstagram, FiLinkedin, FiX } from "react-icons/fi";
 export default function Form() {
 
     return (
-        <section>
+        <section className="px-10">
             <div className="-mt-40 mx-auto max-w-[var(--max-width)] min-h-screen flex justify-between gap-20">
                 <div className="flex flex-col gap-40 py-16">
                     <ul className="flex items-start gap-4 flex-wrap">

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function WhoWeAre() {
 
     return (
-        <section>
+        <section className="px-10">
             <div className="mx-auto max-w-[var(--max-width)] flex justify-between gap-24 items-center py-20">
                 <div className="relative w-full max-w-[720px] aspect-video rounded-2xl overflow-hidden">
                     <Image src="/images/vehicle-detection-3.jpg" alt="An image of SSD" fill className="object-cover" />

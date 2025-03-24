@@ -79,7 +79,7 @@ const NAV_LINKS = [
 export default function Footer() {
 
     return (
-        <footer className="bg-dark-blue text-white">
+        <footer className="bg-dark-blue text-white px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] pt-20 flex flex-col gap-40 justify-end">
                 <div className="flex justify-between gap-20">
                     <div className="flex flex-col">

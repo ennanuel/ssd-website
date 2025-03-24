@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Vision () {
 
     return (
-        <section>
+        <section className="px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-20 grid grid-cols-4 grid-rows-2 gap-4">
                 <div className="flex flex-col justify-center col-span-2 p-8">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Our vision</h3>

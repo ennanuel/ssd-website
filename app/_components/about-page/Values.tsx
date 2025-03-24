@@ -39,7 +39,7 @@ const VALUES = [
 export default function Values () {
 
     return (
-        <section className="bg-blue-300/10">
+        <section className="bg-blue-300/10 px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-[120px] pb-20">
                 <div className="flex flex-col items-center justify-center">
                     <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">Our Values</h3>
