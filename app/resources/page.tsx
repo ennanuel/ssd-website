@@ -58,7 +58,7 @@ export default function Research() {
                 <div className="mx-auto max-w-[var(--max-width)] pt-30 pb-20">
                     <div className="flex flex-col items-center justify-center">
                         <h2 className="mt-4 text-4xl leading-[3.6rem] max-w-[32ch] text-center">Resources center</h2>
-                        <p className="mt-8 text-base leading-[1.8rem] max-w-[56ch] text-center">Explore our Resource Center for the latest insights, guides, and tools to help you maximize the benefits of Safe Security Dynamics' advanced vehicle recognition solutions.</p>
+                        <p className="mt-8 text-base leading-[1.8rem] max-w-[56ch] text-center">Explore our Resource Center for the latest insights, guides, and tools to help you maximize the benefits of Safe Security Dynamics&apos; advanced vehicle recognition solutions.</p>
                     </div>
                 </div>
             </section>
@@ -97,7 +97,7 @@ export default function Research() {
                                             index === expandIndex ?
                                                 <ul className="flex flex-col">
                                                     {
-                                                        subLinks.map((subLink, subIndex) => (
+                                                        subLinks.map((subLink) => (
                                                             <li key={subLink.title} className="border-t border-gray-100">
                                                                 <Link href={subLink.href} className="h-10 flex items-center pl-8 pr-4">
                                                                     <span className="text-sm text-gray-800">{subLink.title}</span>

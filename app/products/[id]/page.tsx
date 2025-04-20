@@ -279,7 +279,7 @@ export default function Product() {
                                                 <p className="flex flex-col justify-center gap-[2px] px-[6px]">
                                                     {
                                                         title.split(" ").map((word) => (
-                                                            <span className="text-[.6rem] leading-[.6rem] tracking-tighter uppercase">{word}</span>
+                                                            <span key={word} className="text-[.6rem] leading-[.6rem] tracking-tighter uppercase">{word}</span>
                                                         ))
                                                     }
                                                 </p>
@@ -295,7 +295,7 @@ export default function Product() {
                         <div className="flex">
                             {
                                 PRODUCT_OPTIONS.map(({ title, value }, index) => (
-                                    <button onClick={() => setDetailsToShow(value)} className={`${value === detailsToShow ? 'border-b-white text-blue-main' : 'text-gray-600 hover:text-gray-900'} ${index === 0 ? 'rounded-tl-lg' : index === (PRODUCT_OPTIONS.length - 1) ? 'rounded-tr-lg' : ''} border-r border-b last:border-r-0 border-gray-200 bg-white h-10 sm:h-12 md:h-14 px-4 md:px-8 lg:px-10 flex items-center justify-center`}>
+                                    <button key={index} onClick={() => setDetailsToShow(value)} className={`${value === detailsToShow ? 'border-b-white text-blue-main' : 'text-gray-600 hover:text-gray-900'} ${index === 0 ? 'rounded-tl-lg' : index === (PRODUCT_OPTIONS.length - 1) ? 'rounded-tr-lg' : ''} border-r border-b last:border-r-0 border-gray-200 bg-white h-10 sm:h-12 md:h-14 px-4 md:px-8 lg:px-10 flex items-center justify-center`}>
                                         <span className="text-sm sm:text-base">{title}</span>
                                     </button>
                                 ))
@@ -325,8 +325,8 @@ export default function Product() {
                                     </div> :
                                     <div className="flex flex-col gap-10 p-10">
                                         {
-                                            PRODUCT_DETAILS.map(({ title, details }) => (
-                                                <div className="border-t first:border-t-0 border-gray-200">
+                                            PRODUCT_DETAILS.map(({ title, details }, index) => (
+                                                <div key={index} className="border-t first:border-t-0 border-gray-200">
                                                     <h3 className="border-b text-blue-main border-gray-200 py-4 text-lg sm:text-xl">{title}</h3>
                                                     <ul className="mt-4 flex flex-col">
                                                         {

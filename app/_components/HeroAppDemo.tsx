@@ -47,8 +47,8 @@ export default function HeroAppDemo() {
                 <div className="w-full grid grid-cols-[repeat(3,_auto)] sm:grid-cols-3 lg:grid-cols-[repeat(3,_auto)] grid-rows-2 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
                     {
                         CAMERAS.map(({ id, name, cameraFootage }) => (
-                            <div>
-                                <div key={id} className="h-full aspect-square sm:aspect-auto lg:aspect-square flex flex-col overflow-hidden rounded-xl">
+                            <div key={id}>
+                                <div className="h-full aspect-square sm:aspect-auto lg:aspect-square flex flex-col overflow-hidden rounded-xl">
                                     <span className="bg-white flex justify-between items-center gap-2 px-3 py-2">
                                         <div className="flex flex-1 gap-2 items-center">
                                             <span className="w-3 aspect-square rounded-sm border border-gray-300" />
