@@ -5,9 +5,9 @@ import { FiFacebook, FiInstagram, FiLinkedin, FiX } from "react-icons/fi";
 export default function Form() {
 
     return (
-        <section className="px-10">
-            <div className="-mt-40 mx-auto max-w-[var(--max-width)] min-h-screen flex justify-between gap-20">
-                <div className="flex flex-col gap-40 py-16">
+        <section className="px-4 xs:px-6 lg:px-10">
+            <div className="-mt-40 mx-auto max-w-[var(--max-width)] min-h-screen flex flex-col lg:flex-row justify-between gap-20">
+                <div className="flex flex-col gap-40 pt-16 pb-0 lg:pb-16">
                     <ul className="flex items-start gap-4 flex-wrap">
                         {
                             [FiX, FiFacebook, FiLinkedin, FiInstagram].map((Icon, index) => (
@@ -24,9 +24,9 @@ export default function Form() {
                         <p className="text-lg text-gray-600 max-w-[48ch] leading-[2rem]">Have questions about pricings, plans, or SSD? Fill out the form and our customer representatives will be in touh directly.</p>
                     </div>
                 </div>
-                <form action="" className="flex-1 h-fit max-w-[720px] bg-[#f4f7fe] border border-gray-100 rounded-2xl p-10 pt-14 flex flex-col">
+                <form action="" className="flex-1 h-fit lg:max-w-[720px] bg-[#f4f7fe] border border-gray-100 rounded-2xl p-6 md:p-10 pt-10 md:pt-14 flex flex-col">
                     <div className="flex flex-col gap-6">
-                        <div className="flex gap-6">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                             <div className="flex-1 flex flex-col gap-2">
                                 <label htmlFor="name" className="text-sm text-gray-500">Name</label>
                                 <input type="text" id="name" name="name" className="h-14 rounded-md bg-white border border-gray-200 px-4 block" />
@@ -36,7 +36,7 @@ export default function Form() {
                                 <input type="text" id="company" name="company" className="h-14 rounded-md bg-white border border-gray-200 px-4 block" />
                             </div>
                         </div>
-                        <div className="flex gap-6">
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                             <div className="flex-1 flex flex-col gap-2">
                                 <label htmlFor="email" className="text-sm text-gray-500">Email</label>
                                 <input type="text" id="email" name="email" className="h-14 rounded-md bg-white border border-gray-200 px-4 block" />
@@ -48,7 +48,7 @@ export default function Form() {
                         </div>
                         <div className="flex flex-col gap-2">
                             <label htmlFor="message" className="text-sm text-gray-500">Message</label>
-                            <textarea name="message" id="message" className="h-40 rounded-md bg-white border border-gray-200 px-4 block"></textarea>
+                            <textarea name="message" id="message" className="h-40 rounded-md bg-white border border-gray-200 p-4 block"></textarea>
                         </div>
                     </div>
                     <div className="flex flex-col gap-6 my-8">

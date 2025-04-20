@@ -24,14 +24,14 @@ export default function HowItWorks() {
 
 
     return (
-        <section className="min-h-[calc(100vh_-_var(--header-large-height))] bg-dark-blue px-10">
+        <section className="min-h-[calc(100vh_-_var(--header-large-height))] bg-dark-blue px-4 xs:px-6 sm:px-10">
             <div className="mx-auto max-w-[var(--max-width)] pt-40 pb-20">
                 <div className="flex flex-col">
                     <h3 className="text-blue-600 text-base uppercase font-semibold">How it works</h3>
                     <h2 className="text-4xl text-white mt-6">Video analysis, easier than ever before.</h2>
                     <p className="text-white mt-6 max-w-[64ch] leading-[2rem] text-lg">Isarsoft Perception turns security cameras into intelligent sensors.</p>
                 </div>
-                <ul className="mt-14 grid grid-cols-4 gap-4">
+                <ul className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {
                         STEPS.map(({ title, desc }, index, arr) => (
                             <li key={title} className={`${index === arr.length - 1 ? 'bg-yellow-300 text-black' : 'bg-white/5 text-white'} relative flex gap-4 p-4 pb-8 border border-white/20 rounded-2xl`}>

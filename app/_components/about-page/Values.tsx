@@ -39,22 +39,22 @@ const VALUES = [
 export default function Values () {
 
     return (
-        <section className="bg-blue-300/10 px-10">
-            <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-[120px] pb-20">
+        <section className="bg-blue-300/10 px-4 xs:px-6 md:px-10">
+            <div className="text-center mx-auto max-w-[var(--max-width)] min-h-screen pt-[120px] pb-20">
                 <div className="flex flex-col items-center justify-center">
-                    <h3 className="text-blue-800 text-sm uppercase text-center font-semibold">Our Values</h3>
-                    <h2 className="text-4xl text-gray-900 mt-6 text-center">The basis of our actions</h2>
-                    <p className="text-gray-800 mt-4 max-w-[80ch] leading-[2rem] text-lg text-center">In our dealings with customers, partners and colleagues, our values form the basis of our actions.</p>
+                    <h3 className="text-blue-800 text-sm uppercase font-semibold">Our Values</h3>
+                    <h2 className="text-4xl text-gray-900 mt-6 ">The basis of our actions</h2>
+                    <p className="text-gray-800 mt-4 max-w-[80ch] leading-[2rem] text-lg">In our dealings with customers, partners and colleagues, our values form the basis of our actions.</p>
                 </div>
-                <ul className="mt-20 grid grid-cols-3 grid-rows-2 gap-6">
+                <ul className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6">
                     {
                         VALUES.map(({ title, desc, Icon }) => (
-                            <li key={title} className="bg-white rounded-4xl flex flex-col items-center p-8 border border-gray-200">
+                            <li key={title} className="bg-white rounded-4xl flex flex-col items-start sm:items-center text-left sm:text-center p-6 sm:p-8 border border-gray-200">
                                 <span className="w-14 aspect-square rounded-full bg-blue-300/20 flex items-center justify-center">
                                     <Icon size={32} className="text-blue-600" />
                                 </span>
-                                <h3 className="mt-6 text-blue-main text-center font-semibold text-xl">{title}</h3>
-                                <p className="mt-3 text-sm text-center text-gray-600 font-light">{desc}</p>
+                                <h3 className="mt-6 text-blue-main font-semibold text-xl">{title}</h3>
+                                <p className="mt-3 text-sm text-gray-600 font-light">{desc}</p>
                             </li>
                         ))
                     }

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 
 const DEMO_IMAGES = [
@@ -13,18 +13,18 @@ const DEMO_IMAGES = [
 export default function Demo({ isLight }: { isLight?: boolean }) {
 
     return (
-        <section className="px-10">
-            <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100vh_-_var(--header-large-height))] flex py-20">
-                <div className={`${isLight ? 'bg-white border-gray-200' : 'bg-blue-300/10 border-white'} border flex-1 overflow-hidden rounded-2xl py-10 px-20 flex gap-20`}>
+        <section className="px-4 xs:px-6 lg:px-10">
+            <div className="mx-auto max-w-[var(--max-width)] lg:min-h-[calc(100vh_-_var(--header-large-height))] flex py-20">
+                <div className={`${isLight ? 'bg-white border-gray-200' : 'bg-blue-300/10 border-white'} border flex-1 overflow-hidden rounded-2xl py-8 sm:py-10 px-6 sm:px-10 lg:px-20 flex gap-20`}>
                     <div className="flex flex-col justify-center gap-2">
-                        <h2 className="text-4xl text-gray-900 leading-[3.6rem] max-w-[20ch]">Optimize your business processes</h2>
-                        <p className="text-gray-800 max-w-[32ch] leading-[1.6rem]">Book your personal web demo with one of our experts now, for free.</p>
-                        <button className="mt-6 w-fit flex items-center justify-center px-10 h-14 rounded-md bg-blue-500 text-white">
-                            <span className="text-sm">Book 30 min. free call</span>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[2rem] sm:leading-[2.6rem] lg:leading-[3.6rem] text-gray-900 max-w-[20ch]">Optimize your business processes</h2>
+                        <p className="mt-4 sm:mt-0 text-gray-800 max-w-[32ch] text-sm sm:text-base leading-[1.2rem] sm:leading-[1.6rem]">Book your personal web demo with one of our experts now, for free.</p>
+                        <button className="mt-12 sm:mt-6 w-fit flex items-center justify-center px-4 sm:px-8 lg:px-10 h-12 lg:h-14 rounded-md bg-blue-500 text-white">
+                            <span className="text-sm whitespace-nowrap">Book 30 min. free call</span>
                         </button>
                     </div>
                     <div className="flex-1 relative">
-                        <div className="absolute top-0 left-0 w-[120%] grid grid-cols-3 grid-rows-2 gap-5">
+                        <div className="absolute top-0 left-0 w-full min-w-[360px] grid grid-cols-[repeat(3,_40%)] grid-rows-2 gap-5">
                             {
                                 DEMO_IMAGES.map(({ id, name, cameraFootage }) => (
                                     <div key={id} className="flex flex-col aspect-square rounded-2xl overflow-hidden shadow-xl shadow-black/10">

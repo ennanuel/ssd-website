@@ -2,16 +2,25 @@
 
 :root {
   --header-large-height: 72px;
+  --pricing-header-height: 168px;
   --max-width: 1360px;
+  --max-hero-height: 560px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --breakpoint-xs: 25rem;
+
   --color-blue-main: #1E338E;
   --color-dark-blue: #09111e;
+
   --font-inter: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --pricing-header-height: 84px;
+  }
 }
 
 body {

@@ -1581,60 +1581,70 @@ const FEATURES = [
 ]
 
 export default function Features() {
+    const featuresIndexToShow = 0;
 
     return (
-        <section id="features" className="px-10">
+        <section id="features" className="px-4 xs:px-6 md:px-10">
             <div className="mx-auto max-w-[var(--max-width)] min-h-screen pt-30 pb-20">
                 <div className="mb-20 flex flex-col items-center justify-center text-center gap-6">
                     <h3 className="text-sm font-semibold text-blue-800 uppercase">Our features</h3>
                     <h2 className="mt-2 text-4xl text-gray-900">SSD&apos;s solution features list</h2>
                     <p className="text-base text-gray-800 leading-[1.8rem]">A currated list of the features that will be available for each price plan.</p>
                 </div>
-                <div className="sticky top-[calc(var(--header-large-height)_-_8px)] border border-b-0 border-gray-200 rounded-t-xl grid grid-cols-4 overflow-hidden">
-                    <span className="bg-gray-100"></span>
-                    {
-                        PLANS.map(({ title, desc, buttonText }) => (
-                            <div key={title} className="h-44 flex flex-col justify-between gap-4 bg-white border-l border-gray-200 p-4">
-                                <div className="flex flex-col gap-2">
-                                    <h3 className="text-2xl font-semibold text-blue-600">{title}</h3>
-                                    <p className="text-sm text-gray-800">{desc}</p>
+                <div className="sticky top-[calc(var(--header-large-height)_-_8px)] h-[var(--pricing-header-height)] border border-b-0 border-gray-200 rounded-t-xl overflow-hidden">
+                    <div className="h-full hidden lg:grid grid-cols-4">
+                        <span className="bg-gray-100"></span>
+                        {
+                            PLANS.map(({ title, desc, buttonText }) => (
+                                <div key={title} className="h-44 flex flex-col justify-between gap-4 bg-white border-l border-gray-200 p-4">
+                                    <div className="flex flex-col gap-2">
+                                        <h3 className="text-2xl font-semibold text-blue-600">{title}</h3>
+                                        <p className="text-sm text-gray-800">{desc}</p>
+                                    </div>
+                                    <button className="flex items-center justify-center h-10 rounded-md bg-blue-500 text-white hover:bg-blue-600">
+                                        <span className="text-sm">{buttonText}</span>
+                                    </button>
                                 </div>
-                                <button className="flex items-center justify-center h-10 rounded-md bg-blue-500 text-white hover:bg-blue-600">
-                                    <span className="text-sm">{buttonText}</span>
-                                </button>
-                            </div>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
+                    <div className="pt-2 px-4 xs:px-6 sm:px-8 flex lg:hidden gap-4 xs:gap-6 items-center justify-center w-full h-full bg-white">
+                        <span className="text-sm whitespace-nowrap sm:text-base text-gray-600">Features for</span>
+                        <button className="px-4 w-full flex items-center justify-center gap-4 border border-blue-600 text-blue-600 rounded-md max-h-12 h-12">
+                            <span className="text-sm sm:text-base">Enterprice</span>
+                            <FaAngleDown size={14} />
+                        </button>
+                    </div>
                 </div>
                 {
                     FEATURES.map(({ title, features }, index, arr) => (
                         <>
-                            <div key={title} className="sticky top-[calc(var(--header-large-height)_+_168px)] h-12 bg-dark-blue flex items-center px-3">
-                                <span className="text-lg text-white">{title}</span>
+                            <div key={title} className="sticky top-[calc(-8px_+_var(--header-large-height)_+_var(--pricing-header-height))] h-12 bg-dark-blue flex items-center px-3">
+                                <span className="text-base sm:text-lg text-white">{title}</span>
                             </div>
                             <ul key={index} className={`${index == arr.length - 1 ? 'overflow-hidden rounded-b-xl border-b' : ''} border-x border-gray-200 flex flex-col`}>
                                 {
                                     features.map(({ title, desc, listings }) => (
-                                        <li key={title} className="border-t first:border-t-0 border-gray-200 grid grid-cols-4">
+                                        <li key={title} className="border-t first:border-t-0 border-gray-200 grid grid-cols-2 lg:grid-cols-4">
                                             <div className="p-4 pt-6 bg-gray-100 flex flex-col gap-4">
                                                 <button className="flex items-center justify-between gap-4">
-                                                    <span className="text-left text-base font-semibold text-gray-900">{title}</span>
+                                                    <span className="text-left text-sm sm:text-base font-semibold text-gray-900">{title}</span>
                                                     {desc ? <FaAngleDown size={14} className="min-w-[16px]" /> : null}
                                                 </button>
                                                 <p className="hidden text-sm text-gray-500">{desc}</p>
                                             </div>
                                             {
                                                 listings.map(({ isIcon, isNull, info, additionalInfo }, subIndex) => (
-                                                    <li key={subIndex} className="border-l border-gray-200 p-4 pt-6 bg-white flex flex-col items-center justify-center gap-1">
+                                                    <div key={subIndex} className={`${subIndex !== featuresIndexToShow ? 'hidden' : 'flex'} border-l border-gray-200 p-4 pt-6 bg-white lg:flex flex-col items-center justify-center gap-1`}>
                                                         { 
                                                             isIcon ? 
                                                                 isNull ? 
                                                                     <span className="block w-3 aspect-square rounded-full bg-gray-300"></span> :
                                                                     <FiCheck size={28} className="text-green-400" /> :
-                                                                <p className="text-center text-base text-gray-800">{info}</p>
+                                                                <p className="text-center text-sm sm:text-base text-gray-800">{info}</p>
                                                         }
-                                                        { additionalInfo ? <span className="text-center text-gray-600 text-sm">{additionalInfo}</span> : null}
-                                                    </li>
+                                                        { additionalInfo ? <span className="text-center text-gray-600 text-xs sm:text-sm">{additionalInfo}</span> : null}
+                                                    </div>
                                                 ))
                                             }
                                         </li>
