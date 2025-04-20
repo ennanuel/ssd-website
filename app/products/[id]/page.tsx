@@ -272,7 +272,7 @@ export default function Product() {
                                 <div className="flex gap-2 md:gap-4">
                                     {
                                         ADVANTAGES.map(({ title, Icon }) => (
-                                            <span className="rounded-md overflow-hidden flex border border-gray-200 text-gray-400">
+                                            <span key={title} className="rounded-md overflow-hidden flex border border-gray-200 text-gray-400">
                                                 <span className="w-8 aspect-square flex items-center justify-center bg-gray-200 text-gray-400">
                                                     <Icon size={16} />
                                                 </span>
