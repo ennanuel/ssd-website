@@ -1,29 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import React, { useMemo, useState, useRef } from "react";
 
 import { GrSecure } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
-import HeroAppDemo from "../HeroAppDemo";
-import React, { useMemo, useState, useRef, useEffect } from "react";
 
+import HeroAppDemo1 from "./Demo1";
+import HeroAppDemo2 from "./Demo2";
+import HeroAppDemo3 from "./Demo3";
 
 
 const SLIDES = [
     {
       title: "Automatic license plate recognition made easy",
       description: "Deploy license plate and vehicle recognition with Rekor’s OpenALPR suite of solutions designed.",
-      Demo: AppDemo
+      Demo: HeroAppDemo1
     },
     {
       title: "Enhance Safety with Real-time Data",
       description: "Safe Security Dynamics delivers AI-powered license plate recognition, providing real-time data to enhance safety.",
-      Demo: HeroAnimation
+      Demo: HeroAppDemo2
     },
     {
       title: "AI-Powered Solutions for Modern Security",
       description: "Leverage cutting-edge technology to detect and monitor vehicles efficiently with our innovative systems.",
-      Demo: AppDemo
+      Demo: HeroAppDemo3
     }
 ];
 
@@ -37,7 +39,7 @@ export default function Hero() {
 
     return (
         <section className="bg-dark-blue text-white overflow-hidden min-h-dvh px-4 xs:px-6 sm:px-10">
-            <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100dvh_-_var(--header-large-height))] flex flex-col-reverse lg:flex-row gap-10 pt-20 pb-10 lg:pt-10">
+            <div className="mx-auto max-w-[var(--max-width)] min-h-[calc(100dvh_-_var(--header-large-height))] flex flex-col-reverse lg:flex-row gap-10 pt-10 sm:pt-20 pb-10 lg:pt-10">
                 <div className="flex flex-col gap-8 justify-between flex-2">
                     <ul className="flex gap-2">
                         {
@@ -98,52 +100,10 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-                <Demo key={activeIndex} goToNextSlide={nextSlide} carouselTimeout={carouselTimeout} duration={5000} />
+                <div className="flex items-end flex-3 pb-3">
+                    <Demo key={activeIndex} goToNextSlide={nextSlide} carouselTimeout={carouselTimeout} duration={5000} />
+                </div>
             </div>
         </section>
     )
 };
-
-type CarouselProps = { 
-    goToNextSlide: () => void; 
-    carouselTimeout: React.RefObject<NodeJS.Timeout | null>; 
-    duration: number; 
-}
-
-function AppDemo({ goToNextSlide, carouselTimeout, duration }: CarouselProps) {
-
-    useEffect(() => {
-        if(carouselTimeout.current) clearTimeout(carouselTimeout.current);
-        carouselTimeout.current = setTimeout(goToNextSlide, duration);
-    }, [])
-
-    return (
-        <div className="flex items-end flex-3 pb-6">
-            <HeroAppDemo />
-        </div>
-    )
-};
-
-function HeroAnimation({ goToNextSlide, carouselTimeout }: CarouselProps) {
-    const video = useRef<HTMLVideoElement>(null);
-
-    function handleVideoEnd() {
-        if(carouselTimeout.current) clearTimeout(carouselTimeout.current);
-        carouselTimeout.current = null;
-        goToNextSlide();
-    };
-
-    function startVideo() {
-        video?.current?.play();
-    };
-
-    return (
-        <div className="flex items-end flex-3 pb-6">
-            <div className="h-full w-full max-h-[var(--max-hero-height)]">
-                <div className="flex relative left-0 lg:left-[10%] w-full lg:w-[110%] h-full rounded-2xl overflow-hidden bg-gradient-to-r from-white/20 to-white/5">
-                    <video ref={video} src="/animations/SSD_Animation_video1.mp4" muted controls={false} onLoadedData={startVideo} onEnded={handleVideoEnd} className="lg:absolute w-full h-auto lg:h-full object-cover" />
-                </div>
-            </div>
-        </div>
-    )
-}
