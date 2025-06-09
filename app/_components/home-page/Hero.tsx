@@ -28,31 +28,12 @@ const SLIDES = [
 ];
 
 export default function Hero() {
-    const interval = useRef<NodeJS.Timeout>(null);
+    const carouselTimeout = useRef<NodeJS.Timeout>(null);
     const [activeIndex, setActiveIndex] = useState(0);
     const { title, description, Demo } = useMemo(() => SLIDES[activeIndex] || SLIDES[0], [activeIndex]);
+
     const chooseIndexToShow = (num: number) => setActiveIndex(num);
-
-    useEffect(() => {
-        const clearSlideInterval = () => {
-            if (interval.current) clearInterval(interval.current);
-        }
-        
-        clearSlideInterval();
-
-        const changeToNextSlide = () => {
-            setActiveIndex((currentIndex) => {
-                const incrementedIndex = currentIndex + 1;
-                const nextIndex = incrementedIndex < SLIDES.length ? incrementedIndex : 0;
-
-                return nextIndex;
-            })
-        }
-
-        interval.current = setInterval(changeToNextSlide, 5000);
-
-        return clearSlideInterval;
-    }, []);
+    const nextSlide = () => setActiveIndex((prevIndex) => prevIndex < (SLIDES.length - 1) ? prevIndex + 1 : 0);
 
     return (
         <section className="bg-dark-blue text-white overflow-hidden min-h-dvh px-4 xs:px-6 sm:px-10">
@@ -117,13 +98,24 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-                <Demo />
+                <Demo key={activeIndex} goToNextSlide={nextSlide} carouselTimeout={carouselTimeout} duration={5000} />
             </div>
         </section>
     )
 };
 
-function AppDemo() {
+type CarouselProps = { 
+    goToNextSlide: () => void; 
+    carouselTimeout: React.RefObject<NodeJS.Timeout | null>; 
+    duration: number; 
+}
+
+function AppDemo({ goToNextSlide, carouselTimeout, duration }: CarouselProps) {
+
+    useEffect(() => {
+        if(carouselTimeout.current) clearTimeout(carouselTimeout.current);
+        carouselTimeout.current = setTimeout(goToNextSlide, duration);
+    }, [])
 
     return (
         <div className="flex items-end flex-3 pb-6">
@@ -132,13 +124,24 @@ function AppDemo() {
     )
 };
 
-function HeroAnimation() {
+function HeroAnimation({ goToNextSlide, carouselTimeout }: CarouselProps) {
+    const video = useRef<HTMLVideoElement>(null);
+
+    function handleVideoEnd() {
+        if(carouselTimeout.current) clearTimeout(carouselTimeout.current);
+        carouselTimeout.current = null;
+        goToNextSlide();
+    };
+
+    function startVideo() {
+        video?.current?.play();
+    };
 
     return (
         <div className="flex items-end flex-3 pb-6">
             <div className="h-full w-full max-h-[var(--max-hero-height)]">
-                <div className="flex relative left-0 lg:left-[10%] w-[110%] sm:w-full lg:w-[110%] h-full rounded-2xl overflow-hidden bg-gradient-to-r from-white/20 to-white/5">
-                    <video src="/animations/SSD_Animation_video1.mp4" autoPlay controls={false} className="absolute w-full h-full object-cover" />
+                <div className="flex relative left-0 lg:left-[10%] w-full lg:w-[110%] h-full rounded-2xl overflow-hidden bg-gradient-to-r from-white/20 to-white/5">
+                    <video ref={video} src="/animations/SSD_Animation_video1.mp4" muted controls={false} onLoadedData={startVideo} onEnded={handleVideoEnd} className="lg:absolute w-full h-auto lg:h-full object-cover" />
                 </div>
             </div>
         </div>
