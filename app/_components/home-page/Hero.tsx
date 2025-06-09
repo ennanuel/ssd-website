@@ -18,7 +18,7 @@ const SLIDES = [
     {
       title: "Enhance Safety with Real-time Data",
       description: "Safe Security Dynamics delivers AI-powered license plate recognition, providing real-time data to enhance safety.",
-      Demo: AppDemo
+      Demo: HeroAnimation
     },
     {
       title: "AI-Powered Solutions for Modern Security",
@@ -121,13 +121,26 @@ export default function Hero() {
             </div>
         </section>
     )
-}
+};
 
 function AppDemo() {
 
     return (
         <div className="flex items-end flex-3 pb-6">
             <HeroAppDemo />
+        </div>
+    )
+};
+
+function HeroAnimation() {
+
+    return (
+        <div className="flex items-end flex-3 pb-6">
+            <div className="h-full w-full max-h-[var(--max-hero-height)]">
+                <div className="flex relative left-0 lg:left-[10%] w-[110%] sm:w-full lg:w-[110%] h-full rounded-2xl overflow-hidden bg-gradient-to-r from-white/20 to-white/5">
+                    <video src="/animations/SSD_Animation_video1.mp4" autoPlay controls={false} className="absolute w-full h-full object-cover" />
+                </div>
+            </div>
         </div>
     )
 }
