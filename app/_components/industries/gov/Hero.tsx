@@ -7,7 +7,7 @@ import { FaChartBar } from "react-icons/fa6";
 import { GrSecure } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { PiSpeedometerFill } from "react-icons/pi";
-import HeroAppDemo from "../../HeroAppDemo";
+import HeroAppDemo from "../../HeroDemo";
 
 const POINTS = [
     {

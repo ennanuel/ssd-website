@@ -68,7 +68,7 @@ export default function HeroAppDemo3({ goToNextSlide, carouselTimeout, duration 
                                 >
                                     {
                                         chartHeights.map((chartHeight) => (
-                                            <span style={{ minHeight: chartHeight }} className={`${chartColor} block flex-1 min-w-4 rounded-t-xl bg-white`} />
+                                            <span key={chartHeight} style={{ minHeight: chartHeight }} className={`${chartColor} block flex-1 min-w-4 rounded-t-xl bg-white`} />
                                         ))
                                     }
                                 </div>
