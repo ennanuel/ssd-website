@@ -49,9 +49,11 @@ export default function Faq() {
                         {
                             FAQs.map(({ question, answer }, index) => (
                                 <li key={index} className="group border-b border-gray-200 pl-4 xs:pl-4 pr-4">
-                                    <button onClick={() => selectFaq(index)} className="w-full hover:text-blue-600 text-gray-800 py-4 sm:py-8 flex items-center justify-between gap-6">
-                                        <h4 className={`text-base sm:text-lg ${index !== faqIndexToShow && 'group-hover:translate-x-4'}`}>{question}</h4>
-                                        <FaAngleDown size={20} className={`block ${index === faqIndexToShow && 'rotate-180'}`} />
+                                    <button onClick={() => selectFaq(index)} className="w-full hover:text-blue-600 text-gray-800 py-4 sm:py-8 flex  justify-between gap-6">
+                                        <h4 className={`text-left text-base sm:text-lg ${index !== faqIndexToShow && 'group-hover:translate-x-4'}`}>{question}</h4>
+                                        <span className="w-[1.5rem] sm:w-[1.556rem] aspect-square flex items-center justify-center">
+                                          <FaAngleDown size={20} className={`block ${index === faqIndexToShow && 'rotate-180'}`} />
+                                        </span>
                                     </button>
                                     <div className={`w-full ${index !== faqIndexToShow && 'hidden'}`}>
                                       <p className="text-base text-gray-800 max-w-[88ch] px-4 pb-6">{answer}</p>
