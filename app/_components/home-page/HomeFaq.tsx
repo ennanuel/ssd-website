@@ -4,36 +4,24 @@ import { FaAngleDown } from "react-icons/fa6";
 
 const FAQs = [
   {
-    question: "What is a License Plate Recognition (LPR) system?",
-    answer: ""
+    question: "What is Safe Security Dynamics and how does it work?",
+    answer: "Safe Security Dynamics uses ALPR (Automatic License Plate Recognition) technology to detect, track, and analyze vehicles through connected security cameras. It also supports user registration and blacklist alerting."
   },
   {
-    question: "Can the system operate in various weather conditions?",
-    answer: ""
+    question: "What kind of cameras are compatible with the system?",
+    answer: "The system works with most IP-based security cameras. No special hardware is required—our software adapts to your existing surveillance infrastructure."
   },
   {
-    question: "How accurate is the system in identifying license plates?",
-    answer: ""
+    question: "Can I receive alerts for specific vehicles or license plates?",
+    answer: "Yes, you can configure custom alerts for blacklisted, whitelisted, or flagged vehicles directly through the dashboard."
   },
   {
-    question: "Is the system compatible with other security technologies?",
-    answer: ""
+    question: "Is the system suitable for private properties and gated communities",
+    answer: "Absolutely. Safe Security Dynamics is ideal for residential estates, commercial facilities, and other controlled-access environments."
   },
   {
-    question: "What vehicle information can the LPR system detect?",
-    answer: ""
-  },
-  {
-    question: "How does the system handle data privacy and compliance?",
-    answer: ""
-  },
-  {
-    question: "How does the LPR system enhance security?",
-    answer: ""
-  },
-  {
-    question: "Can the LPR system be customized to meet specific needs?",
-    answer: ""
+    question: "How is data stored and secured?",
+    answer: "All data is encrypted and stored securely. We follow industry best practices for privacy, access control, and compliance with local data protection regulations."
   }
 ];
 

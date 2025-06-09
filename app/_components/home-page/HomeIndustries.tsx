@@ -56,7 +56,7 @@ export default function Industries() {
                 <div className="flex flex-col">
                     <h3 className="text-blue-800 text-sm uppercase font-semibold">Engineered for all</h3>
                     <h2 className="text-4xl text-gray-900 mt-6 max-w-[28ch]">Industries / Use cases</h2>
-                    <p className="text-gray-800 mt-6 max-w-[48ch] leading-[2rem] text-lg">Our AI-driven technology offers real-time vehicle detection, capturing plate numbers, make, model, and direction of travel with exceptional accuracy.</p>
+                    <p className="text-gray-800 mt-6 max-w-[48ch] leading-[2rem] text-lg">Discover how Safe Security Dynamics adapts to diverse environments—from law enforcement to gated communities—enhancing vehicle tracking, access control, and threat detection across multiple industries.</p>
                     <a href="#" className="text-blue-600 flex items-center gap-4 mt-12">
                         <span className="font-semibold">Learn more about our use cases</span>
                         <FaArrowRight size={14} />

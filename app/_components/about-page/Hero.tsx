@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <section className="px-4 xs:px-6 md:px-10 overflow-hidden">
             <div className="mx-auto pb-10 lg:pb-0 max-w-[var(--max-width)] min-h-[calc(100dvh_-_var(--header-large-height))] flex flex-col-reverse lg:flex-row gap-14">
-                <div className="flex-1 lg:flex-auto flex flex-col lg:py-30 gap-12">
+                <div className="flex-1 flex flex-col lg:py-30 gap-12">
                     <div className="flex-1 flex flex-col justify-start lg:justify-center">
                         <h1 className="mt-4 text-4xl sm:text-5xl leading-[2.6rem] sm:leading-[3.6rem] max-w-[20ch] text-gray-900">We make every camera count</h1>
                         <p className="mt-6 text-lg leading-[2rem] max-w-[40ch] text-gray-800">Isarsoft helps customers and partners to utilize the full potential of security camera systems through artificial intelligence.</p>

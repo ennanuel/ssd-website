@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { GrGlobe } from "react-icons/gr";
 
@@ -38,6 +41,9 @@ const NAV_LINKS = [
 ]
 
 export default function Header() {
+    const [showMobileHeader, setShowMobileHeader] = useState(false);
+
+    const toggleShowMobileHeader = () => setShowMobileHeader(!showMobileHeader);
 
 
     return (
@@ -89,17 +95,17 @@ export default function Header() {
                             <GrGlobe size={20} />
                             <span className="text-sm">EN</span>
                         </button>
-                        <button className="menu-btn group w-fit sm:w-12 sm:aspect-square rounded-full hover:text-blue-400 flex items-center justify-center focus:rotate-45 transition-transform duration-300 focus:delay-300">
+                        <button onClick={toggleShowMobileHeader} className={`${showMobileHeader ? 'rotate-45 delay-300' : ''} duration-30 menu-btn group w-fit sm:w-12 sm:aspect-square rounded-full hover:text-blue-400 flex items-center justify-center transition-transform`}>
                             <span className="flex flex-col w-8 gap-2">
-                                <span className="block w-full h-0.5 bg-white group-focus:translate-y-2.5 transition-transform duration-300 delay-200 group-focus:delay-0" />
-                                <span className="block w-full h-0.5 bg-white group-focus:rotate-90 transition-transform duration-300 group-focus:delay-200" />
-                                <span className="block w-full h-0.5 bg-white group-focus:-translate-y-2.5 transition-transform duration-300 delay-200 group-focus:delay-0" />
+                                <span className={`${showMobileHeader ? 'translate-y-2.5 delay-0' : 'delay-200'} block w-full h-0.5 bg-white transition-transform duration-300`} />
+                                <span className={`${showMobileHeader ? 'rotate-90 delay-200' : ''} block w-full h-0.5 bg-white transition-transform duration-300`} />
+                                <span className={`${showMobileHeader ? '-translate-y-2.5 delay-0' : 'delay-200'} block w-full h-0.5 bg-white transition-transform duration-300`} />
                             </span>
                         </button>
                     </div>
                 </div>
             </div>
-            <nav className="-mt-0.25 w-full bg-dark-blue text-white shadow-xl shadow-black/5 peer-[:has(.menu-btn:focus)]:block hidden">
+            <nav className={`${showMobileHeader ? 'block lg:hidden' : 'hidden'} -mt-0.25 w-full bg-dark-blue text-white shadow-xl shadow-black/5`}>
                 <ul className="flex flex-col">
                     {
                         NAV_LINKS.map(({ title, href, subLinks }) => (
