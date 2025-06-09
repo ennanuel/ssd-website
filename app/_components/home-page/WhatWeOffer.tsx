@@ -4,7 +4,7 @@ import { JSX } from "react";
 import { AiOutlineAlert } from "react-icons/ai";
 
 import { FaRegCheckCircle } from "react-icons/fa";
-import { FiAlertCircle, FiAlertTriangle, FiArrowUpRight, FiEdit2, FiUser } from "react-icons/fi";
+import { FiAlertTriangle, FiArrowUpRight, FiUser } from "react-icons/fi";
 import { GoArchive, GoPencil } from "react-icons/go";
 import { IoIosOptions } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
@@ -18,69 +18,6 @@ type OfferComponentProps = {
     index: number;
     Demo: () => JSX.Element
 };
-
-const VEHICLE_DETECTIONS = [
-  {
-    id: 1,
-    name: "Kinna Mixhel",
-    timeStamp: "9/7/2023",
-    memberStatus: "ALLOWED",
-    plateNumber: "1C3CCBHG3CN739831",
-    carMake: "Mazda",
-    carModel: "B-Series",
-    carModelYear: 2008,
-  },
-  {
-    id: 2,
-    name: "Ravi Danielian",
-    timeStamp: "12/14/2023",
-    memberStatus: "PROHIBITTED",
-    plateNumber: "JN1AZ4EH7CM204357",
-    carMake: "Ford",
-    carModel: "Explorer",
-    carModelYear: 2007,
-  },
-  {
-    id: 3,
-    name: "Merrily Portress",
-    timeStamp: "1/29/2024",
-    memberStatus: "PROHIBITTED",
-    plateNumber: "WBSBL93464P595364",
-    carMake: "Land Rover",
-    carModel: "Range Rover",
-    carModelYear: 1994,
-  },
-  {
-    id: 4,
-    name: "Janetta Brosh",
-    timeStamp: "12/4/2023",
-    memberStatus: "SUSPENDED",
-    plateNumber: "WAULT54B13N018654",
-    carMake: "Isuzu",
-    carModel: "Amigo",
-    carModelYear: 1999,
-  },
-  {
-    id: 5,
-    name: "Cristina Delacroix",
-    timeStamp: "3/20/2024",
-    memberStatus: "ALLOWED",
-    plateNumber: "WDDUG7GB8FA061599",
-    carMake: "Land Rover",
-    carModel: "Discovery Series II",
-    carModelYear: 1999,
-  },
-  {
-    id: 6,
-    name: "Livia O'Dea",
-    timeStamp: "11/27/2023",
-    memberStatus: "ALLOWED",
-    plateNumber: "2FMGK5B89FB144266",
-    carMake: "Acura",
-    carModel: "RSX",
-    carModelYear: 2005,
-  },
-];
 
 const OFFERS = [
     {

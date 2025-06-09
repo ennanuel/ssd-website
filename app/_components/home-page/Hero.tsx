@@ -35,7 +35,7 @@ export default function Hero() {
 
     useEffect(() => {
         const clearSlideInterval = () => {
-            interval.current && clearInterval(interval.current);
+            if (interval.current) clearInterval(interval.current);
         }
         
         clearSlideInterval();
