@@ -220,7 +220,7 @@ function DemoToDisplay3() {
                     <span className="text-xs font-semibold">Archive</span>
                 </span>
             </div>
-            <div className="flex flex-col rounded-lg border border-blue-200">
+            <div className="flex flex-col rounded-lg border-2 border-blue-200/60">
                 <div className="flex justify-between items-start text-gray-600">
                     <span className="mx-4 my-6 flex items-center gap-4">
                         <FiUser size={24} />
@@ -232,16 +232,16 @@ function DemoToDisplay3() {
                 </div>
                 <div className="m-4 mt-0 p-4 flex flex-col gap-3 bg-blue-100/60 rounded-md">
                     <div className="flex items-center justify-between gap-2 font-semibold text-sm text-gray-700">
-                        <span className="flex-2">Role</span>
-                        <span className="flex-1">Staff</span>
+                        <span className="flex-3">Role</span>
+                        <span className="flex-2">Staff</span>
                     </div>
                     <div className="flex items-center justify-between gap-2 font-semibold text-sm text-gray-700">
-                        <span className="flex-2">Status</span>
-                        <span className="flex-1">Allowed</span>
+                        <span className="flex-3">Status</span>
+                        <span className="flex-2">Allowed</span>
                     </div>
                     <div className="flex items-center justify-between gap-2 font-semibold text-sm text-gray-700">
-                        <span className="flex-2">Last detected</span>
-                        <span className="flex-1">2 May, 2025</span>
+                        <span className="flex-3">Last detected</span>
+                        <span className="flex-2">2 May, 2025</span>
                     </div>
                 </div>
             </div>
