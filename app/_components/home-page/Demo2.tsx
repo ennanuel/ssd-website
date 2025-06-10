@@ -60,7 +60,7 @@ export default function HeroAppDemo2({ goToNextSlide, carouselTimeout }: Carouse
         <HeroAppDemoContainer>
             <div className="w-full grid grid-cols-1 md:grid-cols-[2fr_1fr] grid-rows-1 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">  
                 <div className="flex flex-col p-4 rounded-l-xl md:rounded-r-xl bg-white shadow-xl shadow-black/10">
-                    <video ref={video} src="/animations/SSD_Animation_video1.mp4" muted controls={false} onLoadedData={startVideo} onEnded={handleVideoEnd} className="w-full h-auto min-h-[200px] object-cover rounded-lg border-3 border-gray-200" />
+                    <video ref={video} src="/animations/SSD_Animation_video1.mp4" muted autoPlay controls={false} onLoadedData={startVideo} onEnded={handleVideoEnd} className="w-full h-auto min-h-[200px] object-cover rounded-lg border-3 border-gray-200" />
                     <span className="mt-4 overflow-hidden relative flex bg-blue-200 h-1 w-full rounded-full before:w-1/2 before:bg-blue-800" />
                     <div className="mt-2 flex items-center justify-between gap-4">
                         <div className="flex gap-2">

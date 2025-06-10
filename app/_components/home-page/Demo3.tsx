@@ -54,17 +54,17 @@ export default function HeroAppDemo3({ goToNextSlide, carouselTimeout, duration 
     return (
         <HeroAppDemoContainer>
             <div className="w-full grid grid-cols-1 md:grid-cols-[2fr_1fr] grid-rows-1 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
-                <div className="flex flex-col gap-4 md:gap-6">
+                <div className="flex flex-col gap-3 sm:gap-4 md:gap-6">
                     {
                         STATS.map(({ value, title, colors, chartColor, chartHeights }) => (
-                            <div key={title} className={`${colors} relative flex-1 flex items-center gap-4 px-6 py-4 rounded-xl overflow-hidden shadow-xl shadow-black/10`}>
+                            <div key={title} className={`${colors} relative flex-1 flex items-center gap-4 px-4 sm:px-6 py-2 sm:py-4 rounded-l-xl rounded-r-none xs:rounded-r-xl overflow-hidden shadow-xl shadow-black/10`}>
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-4xl font-semibold">{value}</span>
-                                    <span className="text-sm uppercase font-semibold">{title}</span>
+                                    <span className="text-2xl sm:text-3xl md:text-4xl font-semibold">{value}</span>
+                                    <span className="text-xs sm:text-sm uppercase font-semibold">{title}</span>
                                 </div>
                                 <div 
                                     style={{ maskImage: 'linear-gradient(90deg, rgba(0, 0, 0, 0.1), black)' }} 
-                                    className="absolute top-0 right-2 max-w-[240px] w-4/5 h-full flex items-end gap-2"
+                                    className="absolute top-0 right-2 max-w-[240px] w-1/2 sm:w-4/5 h-full flex items-end gap-1 sm:gap-2"
                                 >
                                     {
                                         chartHeights.map((chartHeight) => (
