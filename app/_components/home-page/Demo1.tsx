@@ -32,7 +32,7 @@ export default function AppDemo({ goToNextSlide, carouselTimeout, duration }: Ca
                 {
                     CAMERAS.map(({ id, name, cameraFootage }) => (
                         <div key={id}>
-                            <div className="h-full aspect-square sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white">
+                            <div className="h-full aspect-square sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white shadow-xl shadow-black/20">
                                 <span className="relative flex-1">
                                     <Image src={cameraFootage} fill alt="Camera footage" className="w-full h-full object-cover block rounded-md" />
                                 </span>

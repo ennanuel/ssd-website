@@ -5,7 +5,9 @@ import { FaRegDotCircle } from "react-icons/fa";
 import { FiClipboard, FiFastForward, FiPlay, FiRewind } from "react-icons/fi";
 import { GrOptimize } from "react-icons/gr";
 import { PiGraph } from "react-icons/pi";
+
 import HeroAppDemoContainer from "./HeroAppDemoContainer";
+import { TbNotification } from "react-icons/tb";
 
 
 type CarouselProps = { 
@@ -57,7 +59,7 @@ export default function HeroAppDemo2({ goToNextSlide, carouselTimeout }: Carouse
     return (
         <HeroAppDemoContainer>
             <div className="w-full grid grid-cols-1 md:grid-cols-[2fr_1fr] grid-rows-1 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">  
-                <div className="flex flex-col p-4 rounded-l-xl md:rounded-r-xl bg-white">
+                <div className="flex flex-col p-4 rounded-l-xl md:rounded-r-xl bg-white shadow-xl shadow-black/10">
                     <video ref={video} src="/animations/SSD_Animation_video1.mp4" muted controls={false} onLoadedData={startVideo} onEnded={handleVideoEnd} className="w-full h-auto min-h-[200px] object-cover rounded-lg border-3 border-gray-200" />
                     <span className="mt-4 overflow-hidden relative flex bg-blue-200 h-1 w-full rounded-full before:w-1/2 before:bg-blue-800" />
                     <div className="mt-2 flex items-center justify-between gap-4">
@@ -86,11 +88,17 @@ export default function HeroAppDemo2({ goToNextSlide, carouselTimeout }: Carouse
                         <span className="block w-4/5 mt-1 md:mt-2 h-2 rounded-full bg-gray-200" />
                     </div>
                 </div>                    
-                <div className="hidden md:flex flex-col gap-3 p-6 rounded-xl bg-white">
+                <div className="hidden md:flex flex-col gap-3 p-6 rounded-xl bg-white shadow-xl shadow-black/10">
+                    <span className="mb-2 flex items-center gap-2 text-gray-800">
+                        <TbNotification size={20} />
+                        <span className="font-semibold">Notifications</span>
+                    </span>
                     {
                         PLACEHOLDERS.map(({ title, backgroundColor, textColor, Icon }) => (
                             <div key={title} className={`${backgroundColor} flex-1 flex text-gray-700 items-center gap-4 p-4 rounded-xl`}>
-                                <Icon size={36} />
+                                <span className={`${textColor} flex items-center justify-center w-14 aspect-square rounded-full`}>
+                                    <Icon size={24} />
+                                </span>
                                 <div className="flex flex-1 flex-col gap-1">
                                     <span className={`block w-full h-4 rounded-full ${textColor}`} />
                                     <span className={`block w-4/5 h-3 rounded-full ${textColor}`} />
