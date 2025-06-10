@@ -28,7 +28,7 @@ type Props = {
 export default function MobileHeader({ showHeader, links, showingSubLinks, toggleSubLinksDisplay, toggleShowMobileHeader, displaySubLinks, hideSubLinks }: Props) {
 
     return (
-        <nav className={`${showHeader ? 'block lg:hidden' : 'hidden'} -mt-0.25 w-full max-h-[calc(100dvh_-_var(--header-large-height))] overflow-y-auto bg-dark-blue text-white shadow-xl shadow-black/5`}>
+        <nav className={`${showHeader ? 'block lg:hidden' : 'hidden'} -mt-0.25 w-full max-h-[calc(100dvh_-_var(--header-large-height)_+_1px)] overflow-y-auto bg-dark-blue text-white shadow-xl shadow-black/5`}>
             <ul className="flex flex-col">
                 {
                     links.map((navLink) => (
