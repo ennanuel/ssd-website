@@ -1,8 +1,20 @@
-import { FaPlay } from "react-icons/fa6";
+"use client";
+
+import { useRef, useState } from "react";
+import { FaPause, FaPlay } from "react-icons/fa6";
 
 
 export default function Definition () {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    
+    function pausePlayVideo() {
+        if(!videoRef?.current) return;
 
+        if(isPlaying) videoRef.current.pause();
+        else videoRef?.current?.play();
+        setIsPlaying((prevValue) => !prevValue);
+    };
 
     return (
         <div className="px-4 xs:px-6 sm:px-10">
@@ -12,12 +24,30 @@ export default function Definition () {
                     <h2 className="text-4xl text-gray-900">What is ALPR?</h2>
                 </div>
                 <div className="w-full max-w-[640px]">
-                    <div className="aspect-video rounded-4xl bg-blue-400/20 flex items-center justify-center">
-                        <span className="flex items-center justify-center p-4 border-2 border-dashed border-blue-main/40 rounded-full">
-                            <span className="flex items-center justify-center w-16 aspect-square rounded-full bg-blue-main/40 text-white">
-                                <FaPlay size={20} className="ml-1" />
-                            </span>
-                        </span>
+                    <div className="group/group-parent relative aspect-video rounded-4xl flex items-center justify-center overflow-hidden bg-blue-100 border-4 border-blue-100 has-[button:hover]:border-blue-main/50">
+                        <video 
+                            ref={videoRef} 
+                            controls={false} 
+                            onPlaying={() => setIsPlaying(true)}
+                            onPause={() => setIsPlaying(false)}
+                            onEnded={() => setIsPlaying(false)}
+                            src="https://res.cloudinary.com/dewej0c6m/video/upload/v1749726830/ssd-website/Application_work-in-progress_Demo_Video_igt0se.mp4" 
+                            className="video w-full h-full object-cover" 
+                        />
+                        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                            <button 
+                                onClick={pausePlayVideo} 
+                                className={`${isPlaying ? 'border-blue-main/80 hover:border-blue-main opacity-0 pointer-events-none group-hover/group-parent:opacity-100 group-hover/group-parent:pointer-events-auto' : 'border-blue-main/40 hover:border-blue-main/60'} group/group-child flex items-center justify-center p-4 border-2 border-dashed rounded-full cursor-pointer`}
+                            >
+                                <span className={`${isPlaying ? 'bg-blue-main/80 group-hover:bg-blue-main' : 'group-hover/group-child:bg-blue-main/60 bg-blue-main/40'} flex items-center justify-center w-16 aspect-square rounded-full text-white`}>
+                                    {
+                                        isPlaying ?
+                                            <FaPause size={20} /> :
+                                            <FaPlay size={20} className="ml-1" />
+                                    }
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col">

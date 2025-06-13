@@ -8,6 +8,7 @@ import { GrSecure } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { PiSpeedometerFill } from "react-icons/pi";
 import HeroAppDemo from "../../HeroDemo";
+import HeroBadges from "../../HeroBadges";
 
 const POINTS = [
     {
@@ -57,36 +58,7 @@ export default function Hero() {
                                 <span className="text-sm">Get a demo</span>
                             </button>
                         </div>
-                        <div className="flex items-center gap-4">
-                            <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                <span className="flex items-center justify-center w-[36px] aspect-square bg-blue-500 text-white">
-                                    <GrSecure size={22} />
-                                </span>
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">ALPR</span>
-                                    <br />
-                                    <span>Tested</span>
-                                </p>
-                            </span>
-                            <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                <Image width={40} height={40} src="/icons/ng-flag.png" alt="Nigeria flag" className="block w-[36px] aspect-square" />
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">Made in</span>
-                                    <br />
-                                    <span>Nigeria</span>
-                                </p>
-                            </span>
-                            <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                <span className="flex items-center justify-center w-[36px] aspect-square bg-blue-500 text-white">
-                                    <IoShieldCheckmark size={22} />
-                                </span>
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">IT</span>
-                                    <br />
-                                    <span>Security</span>
-                                </p>
-                            </span>
-                        </div>
+                        <HeroBadges />
                     </div>
                     <div className="flex-3 flex items-center pb-6">
                         <HeroAppDemo />

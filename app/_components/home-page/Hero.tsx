@@ -1,14 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import React, { useMemo, useState, useRef } from "react";
-
-import { GrSecure } from "react-icons/gr";
-import { IoShieldCheckmark } from "react-icons/io5";
 
 import HeroAppDemo1 from "./Demo1";
 import HeroAppDemo2 from "./Demo2";
 import HeroAppDemo3 from "./Demo3";
+import HeroBadges from "../HeroBadges";
 
 
 const SLIDES = [
@@ -68,36 +65,7 @@ export default function Hero() {
                                 <span className="text-sm whitespace-nowrap">Book free 30 mins. call</span>
                             </button>
                         </div>
-                        <div className="flex items-center gap-4">
-                            <span className="flex items-center bg-white/10 text-white/70 rounded-lg overflow-hidden">
-                                <span className="flex items-center justify-center w-[36px] aspect-square bg-blue-500 text-white">
-                                    <GrSecure size={22} />
-                                </span>
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">ALPR</span>
-                                    <br />
-                                    <span>Tested</span>
-                                </p>
-                            </span>
-                            <span className="flex items-center bg-white/10 text-white/70 rounded-lg overflow-hidden">
-                                <Image width={40} height={40} src="/icons/ng-flag.png" alt="Nigeria flag" className="block w-[36px] aspect-square" />
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">Made in</span>
-                                    <br />
-                                    <span>Nigeria</span>
-                                </p>
-                            </span>
-                            <span className="flex items-center bg-white/10 text-white/70 rounded-lg overflow-hidden">
-                                <span className="flex items-center justify-center w-[36px] aspect-square bg-blue-500 text-white">
-                                    <IoShieldCheckmark size={22} />
-                                </span>
-                                <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                    <span className="font-bold tracking-tight">IT</span>
-                                    <br />
-                                    <span>Security</span>
-                                </p>
-                            </span>
-                        </div>
+                        <HeroBadges />
                     </div>
                 </div>
                 <div className="flex items-end flex-3 pb-3">

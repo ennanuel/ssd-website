@@ -4,6 +4,7 @@ import { GrSecure } from "react-icons/gr";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { MdLocalPhone, MdMailOutline } from "react-icons/md";
 import { SiFacebook, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
+import HeroBadges from "./HeroBadges";
 
 
 const NAV_LINKS = [
@@ -83,45 +84,18 @@ export default function Footer() {
             <div className="px-4 xs:px-6 md:px-10">
                 <div className="mx-auto max-w-[var(--max-width)] pt-20 flex flex-col justify-end">
                     <div className="flex flex-col lg:flex-row justify-between gap-20">
-                        <div className="flex flex-col">
-                            <div className="flex items-center gap-2">
-                                <Image src="/icons/logo-alt.png" width={64} height={64} className="w-10 h-auto" alt="Company logo" />
-                                <div className="flex flex-col">
-                                    <h3 className="uppercase font-light tracking-tight text-sm">Safe Security Dynamics</h3>
-                                    <p className="font-light capitalize text-xs">Safety first</p>
+                        <div className="flex flex-col gap-10">
+                            <div className="flex flex-col gap-6">
+                                <div className="flex items-center gap-2">
+                                    <Image src="/icons/logo-alt.png" width={64} height={64} className="w-10 h-auto" alt="Company logo" />
+                                    <div className="flex flex-col">
+                                        <h3 className="uppercase font-light tracking-tight text-sm">Safe Security Dynamics</h3>
+                                        <p className="font-light capitalize text-xs">Safety first</p>
+                                    </div>
                                 </div>
+                                <p className="mt-6 font-light text-sm leading-[1.5rem] max-w-[40ch]">OpenALPR is a solution suite built by Rekor Systems, Inc. that specializes in license plate and vehicle recognition technology.</p>
                             </div>
-                            <p className="mt-6 font-light text-sm leading-[1.5rem] max-w-[40ch]">OpenALPR is a solution suite built by Rekor Systems, Inc. that specializes in license plate and vehicle recognition technology.</p>
-                            <div className="mt-10 flex items-center gap-4">
-                                <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                    <span className="flex items-center justify-center w-8 aspect-square bg-blue-500 text-white">
-                                        <GrSecure size={22} />
-                                    </span>
-                                    <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                        <span className="font-bold tracking-tight">ALPR</span>
-                                        <br />
-                                        <span>Tested</span>
-                                    </p>
-                                </span>
-                                <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                    <Image width={40} height={40} src="/icons/ng-flag.png" alt="Nigeria flag" className="block w-8 aspect-square" />
-                                    <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                        <span className="font-bold tracking-tight">Made in</span>
-                                        <br />
-                                        <span>Nigeria</span>
-                                    </p>
-                                </span>
-                                <span className="flex items-center bg-white text-gray-900 rounded-lg overflow-hidden">
-                                    <span className="flex items-center justify-center w-8 aspect-square bg-blue-500 text-white">
-                                        <IoShieldCheckmark size={22} />
-                                    </span>
-                                    <p className="uppercase text-[.6rem] leading-[.7rem] font-semibold px-2">
-                                        <span className="font-bold tracking-tight">IT</span>
-                                        <br />
-                                        <span>Security</span>
-                                    </p>
-                                </span>
-                            </div>
+                            <HeroBadges iconSize={32} />
                             <ul className="mt-10 flex flex-wrap gap-6">
                                 {
                                     [SiX, SiLinkedin, SiInstagram, SiFacebook].map((Icon, index) => (
