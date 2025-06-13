@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { BsDot } from "react-icons/bs";
-import { GrSecure } from "react-icons/gr";
-import { IoShieldCheckmark } from "react-icons/io5";
 import { MdLocalPhone, MdMailOutline } from "react-icons/md";
 import { SiFacebook, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
 import HeroBadges from "./HeroBadges";

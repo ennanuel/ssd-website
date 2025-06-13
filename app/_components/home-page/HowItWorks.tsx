@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { animate, motion, useAnimation, useMotionValue, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 
 const STEPS = [
     {
