@@ -102,7 +102,7 @@ function CircleSector({ width, height, index }: { width: number; height: number;
     });
 
     useEffect(() => {
-        let control = animate(pathNumber, [0, 359.99], {
+        const control = animate(pathNumber, [0, 359.99], {
             ease: 'linear', 
             duration: 4.8,
             onComplete() {

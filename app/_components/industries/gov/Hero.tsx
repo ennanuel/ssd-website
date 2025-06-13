@@ -1,11 +1,8 @@
 
-import Image from "next/image";
 import { AiFillAlert } from "react-icons/ai";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { FaChartBar } from "react-icons/fa6";
 
-import { GrSecure } from "react-icons/gr";
-import { IoShieldCheckmark } from "react-icons/io5";
 import { PiSpeedometerFill } from "react-icons/pi";
 import HeroAppDemo from "../../HeroDemo";
 import HeroBadges from "../../HeroBadges";
