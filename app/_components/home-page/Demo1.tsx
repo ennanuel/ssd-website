@@ -28,7 +28,7 @@ export default function AppDemo({ goToNextSlide, carouselTimeout, duration }: Ca
 
     return (
         <HeroAppDemoContainer>
-            <div className="w-full grid grid-cols-1 grid-rows-2 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
+            <div className="min-w-full grid grid-cols-1 grid-rows-2 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
                 <div className="flex lg:grid lg:grid-rows-1 lg:grid-cols-[repeat(3,_auto)] gap-4 md:gap-6">
                     {
                         CAMERAS.slice(0, 3).map(({ id, name, cameraFootage }) => (
