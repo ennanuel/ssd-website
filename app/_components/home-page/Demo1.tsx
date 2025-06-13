@@ -63,7 +63,7 @@ export default function AppDemo({ goToNextSlide, carouselTimeout, duration }: Ca
                 <div className="flex lg:grid lg:grid-rows-1 lg:grid-cols-[repeat(3,_auto)] gap-4 md:gap-6">
                     {
                         CAMERAS.slice(3, 6).map(({ id, name, cameraFootage }) => (
-                            <div key={id} className="h-full min-w-[240px] sm:min-w-auto sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white shadow-xl shadow-black/20">
+                            <div key={id} className="h-full min-w-[200px] xs:min-w-[240px] sm:min-w-auto sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white shadow-xl shadow-black/20">
                                 <span className="relative flex-1">
                                     <Image src={cameraFootage} fill alt="Camera footage" className="w-full h-full object-cover block rounded-md" />
                                 </span>

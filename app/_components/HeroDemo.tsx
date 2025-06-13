@@ -14,11 +14,11 @@ export default function HeroDemo() {
 
     return (
         <HeroAppDemoContainer>
-            <div className="w-full grid grid-cols-[repeat(3,_auto)] sm:grid-cols-3 lg:grid-cols-[repeat(3,_auto)] grid-rows-2 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
-                {
-                    CAMERAS.map(({ id, name, cameraFootage }) => (
-                        <div key={id}>
-                            <div className="h-full aspect-square sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white">
+            <div className="relative w-full grid grid-cols-1 grid-rows-2 p-4 sm:p-6 md:p-8 gap-4 md:gap-6">
+                <div className="flex lg:grid lg:grid-rows-1 lg:grid-cols-[repeat(3,_auto)] gap-4 md:gap-6">
+                    {
+                        CAMERAS.slice(0, 3).map(({ id, name, cameraFootage }) => (
+                            <div key={id} className="h-full min-w-[200px] xs:min-w-[240px] sm:min-w-auto sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white shadow-xl shadow-black/20">
                                 <span className="relative flex-1">
                                     <Image src={cameraFootage} fill alt="Camera footage" className="w-full h-full object-cover block rounded-md" />
                                 </span>
@@ -42,10 +42,41 @@ export default function HeroDemo() {
                                         </span>
                                     </div>
                                 </span>
-                            </div>
-                        </div>
-                    ))
-                }
+                            </div> 
+                        ))
+                    }
+                </div>
+                <div className="flex lg:grid lg:grid-rows-1 lg:grid-cols-[repeat(3,_auto)] gap-4 md:gap-6">
+                    {
+                        CAMERAS.slice(3, 6).map(({ id, name, cameraFootage }) => (
+                            <div key={id} className="h-full min-w-[200px] xs:min-w-[240px] sm:min-w-auto sm:aspect-auto lg:aspect-square flex flex-col gap-3 overflow-hidden rounded-xl p-2 bg-white shadow-xl shadow-black/20">
+                                <span className="relative flex-1">
+                                    <Image src={cameraFootage} fill alt="Camera footage" className="w-full h-full object-cover block rounded-md" />
+                                </span>
+                                <span className="bg-white flex flex-col gap-2">
+                                    <div className="flex flex-1 gap-1 items-center">
+                                        <span className="h-3 rounded-full w-1 bg-blue-main block" />
+                                        <span className="text-[.6rem] text-blue-main font-bold">{name}</span>
+                                    </div>
+                                    <div className="hidden sm:flex flex-wrap items-center gap-2">
+                                        <span className="flex items-center gap-1 text-blue-500 border border-blue-200 p-0.5 pr-2 rounded-sm">
+                                            <span className="flex w-3 aspect-square items-center justify-center bg-blue-200 rounded-sm"></span>
+                                            <span className="text-[.5rem] tracking-tight whitespace-nowrap">Camera is active</span>
+                                        </span>
+                                        <span className="flex items-center gap-1 text-red-500 border border-red-200 p-0.5 pr-2 rounded-sm">
+                                            <span className="flex w-3 aspect-square items-center justify-center bg-red-200 rounded-sm"></span>
+                                            <span className="text-[.5rem] tracking-tight whitespace-nowrap">Audio available</span>
+                                        </span>
+                                        <span className="flex items-center gap-1 text-green-500 border border-green-200 p-0.5 pr-2 rounded-sm">
+                                            <span className="flex w-3 aspect-square items-center justify-center bg-green-200 rounded-sm"></span>
+                                            <span className="text-[.5rem] tracking-tight">Jun 14 / 12:00:00 am</span>
+                                        </span>
+                                    </div>
+                                </span>
+                            </div> 
+                        ))
+                    }
+                </div>
             </div>
         </HeroAppDemoContainer>
     )
